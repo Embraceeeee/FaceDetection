@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>SelectRect.qml</file>
+        <file>opencvFile/deploy.prototxt</file>
+        <file>opencvFile/res10_300x300_ssd_iter_140000_fp16.caffemodel</file>
+    </qresource>
+</RCC>
