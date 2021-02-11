@@ -5,7 +5,7 @@ Description: The repository is used to store face detection project written by C
 
 
 
-### 基于OpenCV 与QML的人脸检测与抠图程序
+## 基于OpenCV 与QML的人脸检测与抠图程序
 
 > Qt Project File名称：OpenPhoto
 
@@ -44,3 +44,7 @@ Description: The repository is used to store face detection project written by C
 #### 运行效果
 
 ![效果图](/resultImage/resultImage.png)
+
+#### 参考的学习链接
+* [OpenCV基于残差网络实现人脸检测](https://blog.51cto.com/gloomyfish/2094611)
+* [QML Book](https://cwc1987.gitbooks.io/qmlbook-in-chinese/content/)
