@@ -15,7 +15,7 @@ Description: The repository is used to store face detection project written by C
 
 * 采用的是OpenCv里的DNN模块中已训练好的残差网络模型来检测人脸。
 * 使用QML绘制程序界面。
-* 虽然该程序并没有完善得很好，但作为一个_学习样例_还算okay的，内有C++与QML的交互，检测模型的使用等code。
+* 虽然该程序并没有完善得很好，但作为一个*学习样例*还算okay的，内有C++与QML的交互，检测模型的使用等code。
 
 #### 环境配置
 
