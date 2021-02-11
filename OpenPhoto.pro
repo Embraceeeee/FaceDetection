@@ -42,6 +42,4 @@ INCLUDEPATH += D:\OpenCv\Buildopencv\install\include
 
 LIBS +=  D:\OpenCv\Buildopencv\install\x64\mingw\bin\libopencv_*
 
-DISTFILES += \
-    opencvFile/deploy.prototxt \
-    opencvFile/res10_300x300_ssd_iter_140000_fp16.caffemodel
+

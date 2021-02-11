@@ -24,6 +24,11 @@ const size_t inHeight = 300;
 const double inScaleFactor = 1.0;
 const Scalar meanVal(104.0, 117.0, 123.0);
 
+// 下面两个文件在opencvFile文件夹里有
+const cv::String PROTOTXTPATH = "D:/Qt_file/OpenPhoto/opencvFile/deploy.prototxt";
+const cv::String CAFFEMODELPATH = "D:/Qt_file/OpenPhoto/opencvFile/res10_300x300_ssd_iter_140000_fp16.caffemodel";
+// 点击抠取人脸保存的文件夹路径
+const string SAVEPATH = "C:/Users/Embrace/Desktop";
 class ShowPhoto:public QObject
 {
     //槽函数的宏
@@ -41,6 +46,8 @@ public:
     Mat imagePro(Mat frame);
     //图片提供者
     ImageProvider *m_PhotoProvider;
+
+
 
 
 

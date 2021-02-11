@@ -21,8 +21,8 @@ void ShowPhoto::loadModel(){
 
     //这里会从当前应用程序所在目录的绝对路径里找opencvFile这个目录，可直接用opencvFile这个文件夹所在的绝对路径
     //opencv库里的sample下的dnn里的prototxt文件即可
-    cv::String modelConfiguration = "D:/Qt_file/OpenPhoto/opencvFile/deploy.prototxt";
-    cv::String modelBinary = "D:/Qt_file/OpenPhoto/opencvFile/res10_300x300_ssd_iter_140000_fp16.caffemodel";
+    cv::String modelConfiguration = PROTOTXTPATH;
+    cv::String modelBinary = CAFFEMODELPATH;
     //! [Initialize network]
     net = readNetFromCaffe(modelConfiguration, modelBinary);
 }
@@ -203,30 +203,33 @@ void ShowPhoto::catchROI()
 
             //保存的路径
             stringstream st;
-            st<<"C:/Users/Embrace/Desktop/MaskedFace/";
+            st<<SAVEPATH;
+            st<<"/";
             st<<count;
             st<<".png";
             string saveName = st.str();
             cout<<saveName<<endl;
 
 
-            qDebug()<<"抓取的roi有："<<i<<endl;
+            qDebug()<<"抓取的roi索引："<<i<<endl;
 
             Mat imageROI;
-
+            // 截取打开图片上的某个矩形块，并复制给imageROI变量
             photo(ROIVector[i]).copyTo(imageROI);
 
             bool saveROIBool = imwrite(saveName,imageROI);
 
             if(saveROIBool)
-                qDebug() << "save success!"<<endl;
+                qDebug() << "保存这张人脸成功"<<endl;
             else
-                qDebug() << "save fail!"<<endl;
+                qDebug() << "保存这张人脸失败"<<endl;
 
             count++;
         }
-        else
-            qDebug()<<"你没有选中任何一个人脸框!!!"<<endl;
+        else{
+            //qDebug()<<"你没有选中任何一个人脸框!!!"<<endl;
+        }
+
     }
 
 }

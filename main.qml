@@ -112,46 +112,46 @@ ApplicationWindow {
                 CodePhoto.catchROI();
             }
         }
-        Button{
-            id:openVideoButton
-            width: parent.width
-            height: 40
-            text: qsTr("打开视频")
+//        Button{
+//            id:openVideoButton
+//            width: parent.width
+//            height: 40
+//            text: qsTr("打开视频")
 
-            onClicked: {
-                CodePhoto.openVideo()
-                videoCount.running = true
-
-
-            }
-        }
-        RadioButton{
-            id:cathcVideo1
-            width: parent.width
-            height: 40
-            text: qsTr("每隔一秒抠取")
-
-            onClicked: {
+//            onClicked: {
+//                CodePhoto.openVideo()
+//                videoCount.running = true
 
 
+//            }
+//        }
+//        RadioButton{
+//            id:cathcVideo1
+//            width: parent.width
+//            height: 40
+//            text: qsTr("每隔一秒抠取")
 
-            }
-        }
-        RadioButton{
-            id:cathcVideo2
-            width: parent.width
-            height: 40
-            text: qsTr("每隔两秒抠取")
-
-            onClicked: {
+//            onClicked: {
 
 
 
-            }
-        }
-        Button{
-            id:saveROIPath
-        }
+//            }
+//        }
+//        RadioButton{
+//            id:cathcVideo2
+//            width: parent.width
+//            height: 40
+//            text: qsTr("每隔两秒抠取")
+
+//            onClicked: {
+
+
+
+//            }
+//        }
+//        Button{
+//            id:saveROIPath
+//        }
     }
     //定时器实时触发
     Timer{
@@ -185,7 +185,7 @@ ApplicationWindow {
             hr = (height_roi*(400/height_photo))
             console.log("..."+"sxr_"+xr+" syr_"+yr+" swr_"+wr+" shr_"+hr)
             //传给模型，绘制矩形框
-            //selectRectModel.append({"sxr":xr,"syr":yr,"swr":wr,"shr":hr})
+            selectRectModel.append({"sxr":xr,"syr":yr,"swr":wr,"shr":hr})
 
         }
     }
